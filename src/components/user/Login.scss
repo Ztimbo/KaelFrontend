@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.login-container {
+    background-color: $form-bg-color;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: $button-bg-color;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+        &:hover {
+            background-color: darken($button-bg-color, 10%);
+        }
+    }
+}
+
+.logo {
+    max-width: 250px;
+    margin: 0 auto 20px;
+    display: block;
+  }

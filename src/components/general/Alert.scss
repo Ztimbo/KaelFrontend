@@ -1,0 +1,15 @@
+.alert {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: #159abf;
+}
+
+.alert.error {
+    background-color: #bf1515;
+}

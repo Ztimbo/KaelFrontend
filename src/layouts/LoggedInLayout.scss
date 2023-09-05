@@ -1,0 +1,94 @@
+@import "../styles/variables.scss";
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    min-height: 100vh;
+
+  }
+  
+  .sidebar {
+    background-color: $form-bg-color;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    img {
+        max-width: inherit;
+    }
+  }
+
+  .user-name {
+    color: $font-color;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+    flex: auto;
+  }
+  
+  .sidebar-menu li {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: $font-color;
+  }
+  
+  .sidebar-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .sidebar-menu a:hover {
+    opacity: 0.8;
+  }
+
+  .sidebar-menu li:hover, 
+  .sidebar-menu li.active {
+    transform: scale(1.05);
+    background-color: darken($font-color, 10%);
+  }
+  
+  .logoff-button {
+    background-color: $button-bg-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 85%;
+    font-size: 16px;
+  }
+  
+  .logoff-button:hover {
+    background-color: darken($button-bg-color, 10%);
+  }
+  
+  .main-content {
+    padding: 20px;
+    color: $font-color;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    max-height: 93vh
+  }
