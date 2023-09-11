@@ -8,6 +8,7 @@ import './Users.scss';
 import useAuth from "../../hooks/useAuth";
 import GenericAlert from "../general/GenericAlert";
 import { types } from "../../constants/alertType";
+import { Link } from "react-router-dom";
 
 const Users = () => {
     const [tableHeaders, setTableHeaders] = useState([]);
@@ -45,7 +46,11 @@ const Users = () => {
   return (
     <div className="content-table">
         <h2>Usuarios</h2>
-        <GenericTable tableHeaders={tableHeaders} tableHeadersAliases={headers} tableData={tableData} />
+        {
+          tableData.length > 0 ? (
+            <GenericTable tableHeaders={tableHeaders} tableHeadersAliases={headers} tableData={tableData} />
+          ) : <label>No existen usuarios, puedes empezar añadiendo uno <Link to='new'>aqui</Link></label>
+        }
         {msg && <GenericAlert alert={alert} />}
     </div>
   )
