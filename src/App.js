@@ -12,6 +12,8 @@ import NewUser from './components/user/NewUser';
 import UpdateUser from './components/user/UpdateUser';
 import Products from './components/products/Products';
 import Orders from './components/orders/Orders';
+import NewProduct from './components/products/NewProduct';
+import UpdateProduct from './components/products/UpdateProduct';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
               </Route>
               <Route path='/products'>
                 <Route index element={<Products />} />
+                <Route path='new' element={<NewProduct />} />
+                <Route path='update/:id' element={<UpdateProduct />} />
               </Route>
               <Route path='/orders'>
                 <Route index element={<Orders />} />
