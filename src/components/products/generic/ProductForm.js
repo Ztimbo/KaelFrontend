@@ -102,7 +102,7 @@ const ProductForm = ({id}) => {
         let formattedPrice = inputPrice.toString().replace('$', '');
 
         if(isNaN(Number(formattedPrice))) {
-            setAlert({msg: 'Solo se permiten valore numéricos', type: types.ERROR});
+            setAlert({msg: 'Solo se permiten valores numéricos', type: types.ERROR});
             return `$${formattedPrice.toString().substring(0, formattedPrice.toString().length - 1)}`;
         }
 
