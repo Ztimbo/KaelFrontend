@@ -90,5 +90,6 @@ body {
     color: $font-color;
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
-    max-height: 93vh
+    max-height: 93vh;
+    overflow-y: auto;
   }

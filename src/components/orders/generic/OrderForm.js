@@ -35,6 +35,16 @@ const OrderForm = ({id}) => {
                 id: 3,
                 product: "Cinco donas",
                 quantity: 1
+            },
+            {
+                id: 4,
+                product: "Cinco donas",
+                quantity: 1
+            },
+            {
+                id: 5,
+                product: "Cinco donas",
+                quantity: 1
             }
         ]);
     }, []);
