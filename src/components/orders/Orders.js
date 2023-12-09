@@ -24,8 +24,6 @@ const Orders = () => {
               
               if(data.length > 0) {
                 data.map(d => {
-                    d.createdAt = getDate(d.createdAt);
-                    d.updatedAt = getDate(d.updatedAt);
                     d.deliverDate = getDate(d.deliverDate);
                 });
 
@@ -50,7 +48,7 @@ const Orders = () => {
         <h2>Ordenes</h2>
         {
           tableData.length > 0 ? (
-            <GenericTable tableHeaders={tableHeaders} tableHeadersAliases={headers} tableData={tableData} />
+            <GenericTable tableHeaders={tableHeaders} tableHeadersAliases={headers} tableData={tableData} isOrdersTable={true} />
           ) : <label>No existen ordenes, puedes empezar añadiendo una <Link to='new'>aqui</Link></label>
         }
         {msg && <GenericAlert alert={alert} />}

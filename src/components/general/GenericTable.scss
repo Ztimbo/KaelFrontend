@@ -4,7 +4,7 @@ th {
     padding: 0!important;
 }
 
-.edit-record-button {
+.edit-record-button, .actions-button {
     width: 100%;
     padding: 10px;
     background-color: $font-color;
@@ -35,4 +35,9 @@ th {
             cursor: pointer;
         }
     }
+}
+
+.actions-table-cell {
+    display: flex!important;
+    gap: 5px;
 }

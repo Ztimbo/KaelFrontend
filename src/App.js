@@ -15,6 +15,7 @@ import Orders from './components/orders/Orders';
 import NewProduct from './components/products/NewProduct';
 import UpdateProduct from './components/products/UpdateProduct';
 import NewOrder from './components/orders/NewOrder';
+import UpdateOrder from './components/orders/UpdateOrder';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               <Route path='/orders'>
                 <Route index element={<Orders />} />
                 <Route path='new' element={<NewOrder />} />
+                <Route path='update/:id' element={<UpdateOrder />} />
               </Route>
             </Route>
           </Routes>
