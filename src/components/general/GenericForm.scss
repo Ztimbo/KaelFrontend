@@ -4,12 +4,12 @@
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 1fr 6fr;
-    max-height: 500px;
     max-width: 400px;
     min-width: 400px!important;
     height: fit-content;
+    max-height: 680px;
 
-    .form-header {
+    &-header {
         background-color: $font-color;
         color: white;
         display: flex;

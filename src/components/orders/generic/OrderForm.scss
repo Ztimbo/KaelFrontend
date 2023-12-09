@@ -1,0 +1,41 @@
+.order-product {
+    margin-bottom: 5px!important;
+    margin-right: 5px!important;
+}
+
+.input-autocomplete {
+    div {
+        height: 40px;
+        margin-bottom: 10px;
+
+        div {
+            height: 40px;
+            padding: 0!important;
+
+            input {
+                padding: 10px!important;
+            }
+        }
+    }
+}
+
+.product-list {
+    padding-top: 1px!important;
+    padding-bottom: 1px!important;
+    margin-bottom: 10px!important;
+    max-height: 170px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    li {
+        padding-left: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+}
+
+.product-list-icon {
+    margin-bottom: 0!important;
+}

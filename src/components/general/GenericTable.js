@@ -38,7 +38,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
 
-const GenericTable = ({tableHeaders, tableHeadersAliases, tableData}) => {
+const GenericTable = ({tableHeaders, tableHeadersAliases, tableData, isOrdersTable}) => {
     const [rowsPerPage, setRowsPerPage] = useState(5);
     const [page, setPage] = useState(0);
     const [order, setOrder] = useState('');
@@ -146,8 +146,12 @@ const GenericTable = ({tableHeaders, tableHeadersAliases, tableData}) => {
                         );
                       }
                     })}
-                    <StyledTableCell align="center">
+                    <StyledTableCell className='actions-table-cell' align="center">
                       <Link className='edit-record-button' to={`update/${row._id}`}>Editar</Link>
+                      {
+                        isOrdersTable && 
+                          <Link className='actions-button'>Test</Link>
+                      }
                     </StyledTableCell>
                   </StyledTableRow>
                 ))}
