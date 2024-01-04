@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.actions-button {
+    box-shadow: none!important;
+    &-option {
+        width: 100%;
+        padding: 10px!important;
+        background-color: $font-color!important;
+        color: white!important;
+        border: none!important;
+        border-radius: 5px 0px 0px 5px!important;
+        cursor: pointer!important;
+        transition: background-color 0.3s ease!important;
+        text-decoration: none!important;
+
+        &:hover {
+            background-color: darken($font-color, 10%)!important;
+        }
+    }
+
+    &-toggle {
+        background-color: $font-color!important;
+        color: white!important;
+        border: none!important;
+
+        &:hover {
+            background-color: darken($font-color, 10%)!important;
+        }
+    }
+}

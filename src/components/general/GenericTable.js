@@ -16,6 +16,7 @@ import './GenericTable.scss'
 import { Link } from 'react-router-dom';
 import { TablePagination } from '@mui/material';
 import { useState, useMemo, useEffect } from 'react';
+import OptionsButton from './OptionsButton';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -43,6 +44,9 @@ const GenericTable = ({tableHeaders, tableHeadersAliases, tableData, isOrdersTab
     const [page, setPage] = useState(0);
     const [order, setOrder] = useState('');
     const [orderBy, setOrderBy] = useState('');
+    const [toggleIndex, setToggleIndex] = useState(0);
+
+    const toggleOptions = ['Creada', 'En Progreso', 'Lista', 'Entregada', 'Cancelada'];
 
     const customHeaders = getHeaders(tableHeaders, tableHeadersAliases);
 
@@ -141,17 +145,26 @@ const GenericTable = ({tableHeaders, tableHeadersAliases, tableData, isOrdersTab
                   <StyledTableRow>
                     {customHeaders.map(entity => {
                       if(entity.name !== '_id') {
-                        return(
-                          <StyledTableCell align="right">{row[entity.name]}</StyledTableCell>
-                        );
+                        if(isOrdersTable && entity.name === 'status') {
+                          return(
+                            <StyledTableCell align='right'>
+                              <OptionsButton
+                                className='actions-button'
+                                options={toggleOptions}
+                                toggleIndex={toggleIndex}
+                                setToggleIndex={setToggleIndex}
+                              />
+                            </StyledTableCell>
+                          )
+                        } else {
+                          return(
+                            <StyledTableCell align="right">{row[entity.name]}</StyledTableCell>
+                          );
+                        }
                       }
                     })}
-                    <StyledTableCell className='actions-table-cell' align="center">
+                    <StyledTableCell align="center">
                       <Link className='edit-record-button' to={`update/${row._id}`}>Editar</Link>
-                      {
-                        isOrdersTable && 
-                          <Link className='actions-button'>Test</Link>
-                      }
                     </StyledTableCell>
                   </StyledTableRow>
                 ))}
